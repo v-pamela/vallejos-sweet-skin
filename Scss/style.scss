@@ -1,0 +1,176 @@
+$color-principal:#b3dbb3;
+$color-secundario:#E7E8D1;
+$color-terciario:#D7E6B1;
+$color-texto: black;
+$font:sans-serif;
+$margin-logo:10px;
+
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+  }
+
+  body{
+
+    font-family: sans-serif;
+    display: block;
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+
+    header{
+        display: grid;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "header";
+        background-color: $color-principal;
+        
+        #logo{
+            max-height: 30px;
+            margin-top: $margin-logo;
+            margin-bottom: $margin-logo;
+            margin-right: $margin-logo;
+            margin-left: $margin-logo;
+        }
+
+        .lista{
+            font-size: 20px;
+            text-decoration: none;
+
+            .item{
+                padding: 0px 5px 0px 5px;
+                font-size: 30px;
+                color: $color-texto !important;
+                border-right: 1px solid $color-texto;  
+                border-left: 1px solid $color-texto;
+                text-align: center;
+
+                &:hover{
+                    background-color: $color-secundario;
+                  }
+
+                &:after{
+                    display: block;
+                    content: "";
+                    background-color: black;
+                    height: 3px;
+                    transform: scale(0,1);
+                    transform-origin: center;
+                    transition: transform .25s;
+                }
+
+                &:hover:after{
+                    transform: scale(1,1);
+                }
+
+
+          }
+
+          @media only screen and (max-width: 992px){
+  
+            .item{
+              border: none;
+            }
+          }
+
+
+      }
+    }
+
+        .slide{
+    
+            .imagen{
+                height: 100vh;
+                background-position: center;
+                object-fit: cover;
+              } 
+              
+              .imagen:hover{
+                transform: scale(1.1);
+                box-shadow: 2px #636363;
+              }
+        }
+
+    @import '_content.scss';
+    @import '_content2.scss';
+    @import '_content3.scss';
+    @import '_content4.scss';
+    @import '_content5.scss';
+
+
+    footer{
+        background-color: $color-principal;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        width: 100%;  
+        padding: 10px;
+        justify-content: center;
+        text-align: center;
+
+        .sitebelow{
+            color: black;
+            position: relative;
+            width: 100%;
+            padding: 0px;
+            top: 0px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: block;
+
+            h2{
+                text-align: center;
+            }
+
+            .redes{
+                width: 100%;
+                text-align: center;
+                list-style: none;
+                text-decoration: none;
+                flex-direction: row;
+
+                a{
+                  color:black;
+                  text-decoration: none;
+
+                  i{
+                    text-decoration: none;
+                    color: black;
+                    height: 30px;
+                    margin: 5px;
+                    font-size: 40px;
+                    
+                    p{
+                        font-family: sans-serif;
+                        color:black;
+                        font-style:bolder;
+                        font-size: 20px;
+                        text-decoration: none;
+                        text-transform: normal;
+                    }
+                    
+                  }  
+                }
+                
+
+            }
+
+            .logo1{
+                padding: 10px;
+
+                #logo1{
+                    text-align: center;
+                    width: 40%;
+                  }
+
+            }
+           
+          }
+
+      }
+    
+}

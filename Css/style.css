@@ -1,0 +1,534 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: block;
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+body header {
+  display: grid;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "header";
+  background-color: #b3dbb3;
+}
+body header #logo {
+  max-height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+body header .lista {
+  font-size: 20px;
+  text-decoration: none;
+}
+body header .lista .item {
+  padding: 0px 5px 0px 5px;
+  font-size: 30px;
+  color: black !important;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  text-align: center;
+}
+body header .lista .item:hover {
+  background-color: #E7E8D1;
+}
+body header .lista .item:after {
+  display: block;
+  content: "";
+  background-color: black;
+  height: 3px;
+  transform: scale(0, 1);
+  transform-origin: center;
+  transition: transform 0.25s;
+}
+body header .lista .item:hover:after {
+  transform: scale(1, 1);
+}
+@media only screen and (max-width: 992px) {
+  body header .lista .item {
+    border: none;
+  }
+}
+body .slide .imagen {
+  height: 100vh;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .slide .imagen:hover {
+  transform: scale(1.1);
+  box-shadow: 2px #636363;
+}
+body .content {
+  height: auto;
+  width: 100%;
+  margin-top: 0px 10px 5px 10px;
+  background-color: white;
+}
+body .content .principal {
+  width: 100%;
+  border-top: 2px solid #E7E8D1;
+  padding: 10px;
+  background-image: url("../imagenes/serums2.jpg");
+  background-size: cover;
+  background-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  flex-wrap: nowrap;
+}
+body .content .principal .call {
+  width: 80%;
+  padding: 10px;
+  float: center;
+  background: rgba(240, 234, 220, 0.53);
+  margin: auto;
+}
+body .content .principal .call h1 {
+  font-size: 35px;
+  color: black;
+  width: inherit;
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+body .content .principal .call p {
+  text-align: center;
+  font-size: 20px;
+  height: 60%;
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+  color: black;
+  text-decoration: none;
+}
+body .content h1 {
+  font-size: 35px;
+  width: 100%;
+  padding: 4px;
+  margin: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+body .content .types {
+  height: auto;
+  padding: 0px;
+  margin: 5px 0px 5px 0px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+body .content .types .type {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  flex-flow: row wrap;
+  border: 1.5px solid black;
+  border-radius: 30px;
+  box-shadow: 2px 2px 2px 1px rgb(180, 180, 180);
+}
+body .content .types .type img {
+  height: 50%;
+  padding: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-bottom: 0px;
+}
+body .content .types .type #i4 {
+  border: 1px solid black;
+}
+body .content .types .type .info {
+  padding: 5px;
+  align-content: center;
+}
+body .content .types .type .info h2 {
+  padding: 5px;
+  margin: 0px 10px 0px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 35px;
+}
+body .content .types .type .info p {
+  padding: 2px;
+  margin: 1px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+}
+@media only screen and (min-width: 650px) and (max-width: 1000px) {
+  body .content .types .types {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 650px) {
+  body .content .types .types {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 650px) and (max-width: 1000px) {
+  body .content .types {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 650px) {
+  body .types {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+body main .content2 {
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 10px;
+}
+body main .content2 .producto {
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  justify-content: center;
+  overflow: hidden;
+  flex: none;
+}
+body main .content2 .producto img {
+  height: 60%;
+  padding: 0px;
+  margin: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex-wrap: wrap;
+}
+body main .content2 .producto img:hover {
+  transform: scale(1.1);
+  transition: 0.9s;
+}
+body main .content2 .producto .name {
+  margin-top: 20px;
+}
+body main .content2 .producto .name h1 {
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+body main .content2 .producto .name p {
+  text-align: center;
+  font-style: italic;
+  font-weight: 0.9px;
+  font-size: 18px;
+}
+@media only screen and (min-width: 600px) {
+  body main .content2 {
+    grid-template-rows: repeat(2, 500px);
+  }
+}
+@media only screen and (min-width: 850px) {
+  body main .content2 {
+    grid-template-rows: repeat(2, 650px);
+  }
+}
+@media only screen and (min-width: 1400px) {
+  body main .content2 {
+    grid-template-rows: repeat(2, 800px);
+  }
+}
+body main .content3 h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 10px;
+}
+body main .content3 .boxes {
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  grid-template-rows: 1fr, 1fr, 1fr;
+}
+body main .content3 .boxes .row .consejo-img img {
+  width: 90%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+body main .content3 .boxes .row .text {
+  padding: 30px;
+  margin: auto;
+  width: inherit;
+}
+body main .content3 .boxes .row .text h2 {
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+}
+body main .content3 .boxes .row .text p {
+  font-size: 18px;
+  max-height: 50%;
+  overflow: scroll;
+}
+@media only screen and (max-width: 768px) {
+  body main .content3 .boxes {
+    grid-template-columns: 1fr;
+  }
+}
+body .content3 h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 10px;
+}
+body .content3 .boxes {
+  margin: 0px;
+  padding: 0px;
+  display: grid;
+  grid-template-rows: 1fr, 1fr, 1fr;
+}
+body .content3 .boxes .row {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+body .content3 .boxes .row .consejo-img img {
+  width: 90%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+body .content3 .boxes .row .text {
+  padding: 30px;
+  margin: auto;
+  width: inherit;
+}
+body .content3 .boxes .row .text h2 {
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+}
+body .content3 .boxes .row .text p {
+  font-size: 18px;
+  max-height: 50%;
+  overflow: scroll;
+}
+@media only screen and (max-width: 768px) {
+  body .content3 .boxes .row {
+    grid-template-columns: 1fr;
+  }
+}
+body main .content4 {
+  background-color: white;
+  padding: 50px;
+}
+body main .content4 .box-info {
+  display: grid;
+  width: inherit;
+  grid-template-columns: repeat(2, 50%);
+  background-image: linear-gradient(to left, #E7E8D1, #D5F2BB);
+  border: 2px solid black;
+  margin: auto;
+  top: 50px;
+  bottom: 50px;
+}
+body main .content4 .box-info div #in1 {
+  height: 90%;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .content4 .box-info .presentacion {
+  height: inherit;
+  margin: auto;
+}
+body main .content4 .box-info .presentacion h1 {
+  font-size: 40px;
+  color: black;
+  margin: 5px;
+  text-align: center;
+}
+body main .content4 .box-info .presentacion p {
+  position: relative;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  margin: 15px;
+}
+@media only screen and (max-width: 600px) {
+  body main .content4 .box-info {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr;
+  }
+}
+@media only screen and (max-width: 700px) {
+  body main content4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: inherit;
+  }
+}
+body main .content5 {
+  width: 100%;
+  margin: 0px;
+  background-color: white;
+  border-top: 2px solid #E7E8D1;
+  float: center;
+}
+body main .content5 .logo-back {
+  height: 500px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  background-image: url("../imagenes/jabones.jpg");
+  background-position: center;
+  display: grid;
+  grid-area: "imagen-logo";
+  padding: 30px;
+}
+body main .content5 .logo-back .logo2 {
+  max-width: 50%;
+  font-size: 50px;
+  text-align: center;
+  padding: 4px;
+  margin: auto;
+  min-height: 80px;
+}
+body main .content5 .contact {
+  display: block;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #1c1c1c;
+  border-radius: 30px;
+  background-color: rgba(240, 234, 220, 0.53);
+  text-align: center;
+}
+body main .content5 .contact h1 {
+  width: 100%;
+  height: inherit;
+  font-size: 30px;
+}
+body main .content5 .contact p {
+  width: 100%;
+  font-style: italic;
+  font-size: 18px;
+  margin: 5px;
+}
+body main .content5 .contact form {
+  margin: 3px;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+}
+body main .content5 .contact form h2 {
+  font-size: 20px;
+}
+body main .content5 .contact form label {
+  font-size: 20px;
+}
+body main .content5 .contact form .form-control {
+  font-size: 20px;
+  float: center;
+  width: 70%;
+  margin: auto;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #1c1c1c;
+  box-shadow: 2px 1px 2px 1px #1c1c1c;
+}
+body main .content5 .contact form textarea {
+  min-height: 100px;
+  max-height: 200px;
+  width: 100%;
+  background: none;
+  border: 1px solid #1c1c1c;
+}
+body main .content5 .contact form .boton {
+  display: block;
+  width: 100%;
+  padding: 3px;
+  font-size: 18px;
+  margin: auto;
+  border: 1px solid black;
+  background-color: #D7E6B1;
+  box-shadow: 2px 2px 2px #1c1c1c;
+  cursor: pointer;
+}
+body footer {
+  background-color: #b3dbb3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  text-align: center;
+}
+body footer .sitebelow {
+  color: black;
+  position: relative;
+  width: 100%;
+  padding: 0px;
+  top: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: block;
+}
+body footer .sitebelow h2 {
+  text-align: center;
+}
+body footer .sitebelow .redes {
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  text-decoration: none;
+  flex-direction: row;
+}
+body footer .sitebelow .redes a {
+  color: black;
+  text-decoration: none;
+}
+body footer .sitebelow .redes a i {
+  text-decoration: none;
+  color: black;
+  height: 30px;
+  margin: 5px;
+  font-size: 40px;
+}
+body footer .sitebelow .redes a i p {
+  font-family: sans-serif;
+  color: black;
+  font-style: bolder;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: normal;
+}
+body footer .sitebelow .logo1 {
+  padding: 10px;
+}
+body footer .sitebelow .logo1 #logo1 {
+  text-align: center;
+  width: 40%;
+}/*# sourceMappingURL=style.css.map */

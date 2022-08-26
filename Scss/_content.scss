@@ -1,0 +1,147 @@
+.content{
+    height: auto;
+    width: 100%;
+    margin-top: 0px 10px 5px 10px;
+    background-color: white;
+    
+    .principal{
+      width: 100%;
+      border-top: 2px solid $color-secundario;
+      padding: 10px ;
+      background-image: url("../imagenes/serums2.jpg");
+      background-size: cover;
+      background-position: center;
+      object-fit: contain;
+      flex-wrap: nowrap;
+
+      .call{
+        width: 80%;
+        padding: 10px;
+        float:center;
+        background: rgb(240, 234, 220, 0.53);
+        margin: auto;
+
+        h1{
+          font-size: 35px;
+          color: black;
+          width: inherit;
+          padding: 5px;
+          margin: 10px;
+          text-align: center;
+          text-transform: uppercase;
+          }
+
+        p{
+          text-align: center;
+          font-size: 20px;
+          height: 60%;
+          width: 90%;
+          padding: 10px;
+          margin: 10px;
+          color: black;
+          text-decoration: none;
+        }
+
+      }
+
+
+    }
+    
+    h1{
+      font-size: 35px;
+      width: 100%;
+      padding: 4px;
+      margin: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .types{
+        height: auto;
+        padding: 0px;
+        margin: 5px 0px 5px 0px;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 5px;
+
+        .type{
+          display: flex;
+          justify-content: center;
+          width: auto;
+          flex-flow: row wrap;
+          border: 1.5px solid black;
+          border-radius: 30px;
+          box-shadow: 2px 2px 2px 1px rgb(180, 180, 180);
+
+            img{
+              height: 50%;
+              padding: 20px;
+              object-fit: cover;
+              padding-bottom: 0px;
+            }
+            #i4{
+              border: 1px solid black;
+            }
+
+            .info{
+                padding: 5px;
+                align-content: center;
+
+                h2{
+                  padding: 5px;
+                  margin: 0px 10px 0px 10px;
+                  text-align: center;
+                  text-decoration: none;
+                  color: black;
+                  font-size: 35px;
+                }
+
+                p{
+                  padding: 2px;
+                  margin: 1px;
+                  color: black;
+                  text-align: center;
+                  text-decoration: none;
+                  font-size: 20px;
+                }
+
+            }
+
+          }
+
+          @media only screen and (min-width:650px) and (max-width: 1000px){
+            .types{
+              display: grid;
+              grid-template-columns: repeat(2,1fr);
+              
+            }
+            
+          }
+          @media only screen and (max-width: 650px){
+            .types{
+              display: grid;
+              grid-template-columns: 1fr;
+              grid-template-rows: repeat(3,1fr);
+            }
+          }
+
+      }
+      @media only screen and (min-width:650px) and (max-width: 1000px){
+        .types{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+        }
+        
+      }
+      
+
+}
+@media only screen and (max-width: 650px){
+        .types{
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(3,1fr);
+        }
+      }
